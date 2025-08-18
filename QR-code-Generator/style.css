@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 420px;
+  padding: 30px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+.container p {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.container input {
+  width: 100%;
+  height: 50px;
+  border: 2px solid #494eea;
+  outline: none;
+  padding: 12px;
+  margin: 12px 0 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.container input:focus {
+  border-color: #764ba2;
+  box-shadow: 0 0 8px rgba(118, 75, 162, 0.4);
+}
+
+.container button {
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(135deg, #494eea, #6a5acd);
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  margin: 20px 0;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.container button:hover {
+  background: linear-gradient(135deg, #6a5acd, #494eea);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+#imgBox {
+  width: 220px;
+  border-radius: 10px;
+  max-height: 0;
+  overflow: hidden;
+  margin: 0 auto;
+  transition: max-height 1s ease;
+}
+
+#imgBox img {
+  width: 100%;
+  padding: 12px;
+}
+
+#imgBox.show-img {
+  max-height: 300px;
+  margin-top: 15px;
+  border: 2px solid #ddd;
+  background: #fafafa;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.error {
+  animation: shake 0.1s linear 10;
+  border-color: #ff4b5c !important;
+  box-shadow: 0 0 8px rgba(255, 75, 92, 0.5);
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-3px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(3px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
